@@ -69,7 +69,7 @@ export const HeroSection = () => {
                   "from-",
                 )} to-${currentTheme.secondary}-400 bg-clip-text text-transparent`}
               >
-                Javier Tymo
+                Javier Ivan
               </span>
               <motion.span
                 animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
