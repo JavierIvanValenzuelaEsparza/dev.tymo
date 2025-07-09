@@ -36,10 +36,10 @@ export const SkillsSection = () => {
       "React Js": "#61DAFB",
       "Node Js": "#339933",
       "Angular Js": "#DD0031",
-      "Next Js": "#000000",
+      "Next Js": "#FFFFFF",
       "Laravel": "#FF2D20",
       "Django": "#092E20",
-      "GitHub": "#181717",
+      "GitHub": "#FFFFFF",
       "MongoDB": "#47A248",
       "SQL": "#4479A1",
     }

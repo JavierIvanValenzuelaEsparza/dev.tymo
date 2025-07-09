@@ -7,6 +7,7 @@ import { Briefcase, Calendar } from "lucide-react"
 import { useContext } from "react"
 import { ThemeContext } from "@/shared/context"
 import { experiences } from "@/shared/constants"
+import Image from "next/image"
 
 export const ExperienceSection = () => {
   const { currentTheme } = useContext(ThemeContext)
@@ -92,9 +93,19 @@ export const ExperienceSection = () => {
                     <div className="md:w-1/3 flex justify-center items-center">
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
-                        className={`w-24 h-24 bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} rounded-full flex items-center justify-center border ${currentTheme.border}`}
+                        className={`w-24 h-24 bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} rounded-full flex items-center justify-center border ${currentTheme.border} overflow-hidden`}
                       >
-                        <Briefcase className={`w-12 h-12 ${currentTheme.text}`} />
+                        {exp.logo ? (
+                          <Image
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            width={118}
+                            height={118}
+                            className="object-contain"
+                          />
+                        ) : (
+                          <Briefcase className={`w-12 h-12 ${currentTheme.text}`} />
+                        )}
                       </motion.div>
                     </div>
                   </div>

@@ -3,11 +3,13 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Download, MessageCircle, Code } from "lucide-react"
+import { SiGit } from "react-icons/si"
 import Image from "next/image"
 import { useContext } from "react"
 import { ThemeContext } from "@/shared/context"
-import { socialLinks } from "@/shared/constants"
+import { socialLinks, gitPlatforms } from "@/shared/constants"
 
 export const HeroSection = () => {
   const { currentTheme } = useContext(ThemeContext)
@@ -127,6 +129,38 @@ export const HeroSection = () => {
               transition={{ delay: 1.5, duration: 0.8 }}
               className="flex space-x-4"
             >
+
+              <Popover>
+                <PopoverTrigger asChild>
+                  <motion.button
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={`w-12 h-12 bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} rounded-full flex items-center justify-center border ${currentTheme.border} ${currentTheme.borderHover} transition-colors`}
+                  >
+                    <SiGit className={`w-5 h-5 ${currentTheme.text}`} />
+                  </motion.button>
+                </PopoverTrigger>
+                <PopoverContent className={`w-48 p-2 ${currentTheme.bg} border ${currentTheme.border}`}>
+                  <div className="space-y-2">
+                    {gitPlatforms.map((platform, index) => (
+                      <motion.a
+                        key={platform.label}
+                        href={platform.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`flex items-center space-x-3 p-2 rounded-md ${currentTheme.bg} ${currentTheme.borderHover} transition-colors group`}
+                      >
+                        <platform.icon className={`w-5 h-5 ${currentTheme.text}`} />
+                        <span className={`text-sm ${currentTheme.text} group-hover:${currentTheme.text.replace('text-', 'text-').replace('-400', '-300')}`}>
+                          {platform.label}
+                        </span>
+                      </motion.a>
+                    ))}
+                  </div>
+                </PopoverContent>
+              </Popover>
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}

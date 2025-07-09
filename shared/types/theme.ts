@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 export interface ColorTheme {
   name: string
   primary: string
@@ -38,6 +40,7 @@ export interface Experience {
   description: string
   tags: string[]
   current: boolean
+  logo?: StaticImageData
 }
 
 export interface SocialLink {
