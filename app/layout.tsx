@@ -5,15 +5,17 @@ import "./globals.css"
 
 const inter = Inter({ 
   subsets: ["latin"],
-  display: 'swap', // Optimize font loading
+  display: 'swap',
   preload: true
 })
 
 export const metadata: Metadata = {
   title: "Javier Esparza | Desarrollador Web",
-  description:
-    "Portafolio profesional de Javier Esparza, desarrollador web especializado en Sistemas WMS y Sistemas ERP",
-  generator: "v0.dev",
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 }
 
 export default function RootLayout({
@@ -24,10 +26,8 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        {/* Preload critical resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* Performance hints */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#000000" />
       </head>
