@@ -10,9 +10,11 @@ import Image from "next/image"
 import { useContext } from "react"
 import { ThemeContext } from "@/shared/context"
 import { socialLinks, gitPlatforms } from "@/shared/constants"
+import { useCVDownload } from "@/hooks/use-cv-download"
 
 export const HeroSection = () => {
   const { currentTheme } = useContext(ThemeContext)
+  const { downloadLightCV } = useCVDownload()
 
   const getRgbaColor = (primary: string) => {
     const colorMap: Record<string, string> = {
@@ -102,6 +104,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 className={`bg-gradient-to-r ${currentTheme.button} ${currentTheme.buttonHover} text-lg px-8 py-4 group border ${currentTheme.border} shadow-lg ${currentTheme.shadow}`}
+                onClick={downloadLightCV}
               >
                 Descargar CV
                 <motion.div
@@ -115,7 +118,13 @@ export const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className={`border-${currentTheme.primary}-400 ${currentTheme.text} hover:bg-${currentTheme.primary}-400 hover:text-black text-lg px-8 py-4 ${currentTheme.bg}`}
+                className={`border-${currentTheme.primary}-400 ${currentTheme.text} hover:bg-${currentTheme.primary}-400 hover:text-white text-lg px-8 py-4 ${currentTheme.bg}`}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact-section')
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contactar

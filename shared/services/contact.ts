@@ -33,8 +33,26 @@ export class ContactService {
       clearTimeout(timeoutId)
 
       if (!response.ok) {
-        const errorText = await response.text().catch(() => 'Unknown error')
-        throw new Error(`HTTP ${response.status}: ${errorText}`)
+        let errorMessage = 'Unknown error'
+        try {
+          const errorData = await response.json()
+          if (errorData.message) {
+            if (Array.isArray(errorData.message)) {
+              errorMessage = errorData.message.join(', ')
+            } else {
+              errorMessage = errorData.message
+            }
+          } else if (errorData.error) {
+            errorMessage = errorData.error
+          }
+        } catch {
+          errorMessage = await response.text().catch(() => 'Unknown error')
+        }
+        
+        const error = new Error(errorMessage)
+        ;(error as any).statusCode = response.status
+        ;(error as any).errorData = await response.json().catch(() => null)
+        throw error
       }
 
       const result = await response.json().catch(() => ({}))

@@ -12,7 +12,7 @@ export function ContactSection() {
   const { currentTheme } = useContext(ThemeContext)
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 relative">
+    <section id="contact-section" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

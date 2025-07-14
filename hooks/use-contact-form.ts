@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import { useToast } from '@/components/ui/use-toast'
+import { toast } from 'sonner'
 import { ContactService } from '@/shared/services/contact'
 import type { 
   ContactFormData, 
@@ -7,12 +7,7 @@ import type {
   UseContactFormReturn 
 } from '@/shared/types/contact'
 
-/**
- * Custom hook for handling contact form logic
- */
 export function useContactForm(): UseContactFormReturn {
-  const { toast } = useToast()
-  
   const [state, setState] = useState<ContactFormState>({
     isSubmitting: false,
     isSuccess: false,
@@ -38,10 +33,8 @@ export function useContactForm(): UseContactFormReturn {
         isError: false,
       }))
 
-      toast({
-        title: "Mensaje enviado",
+      toast.success("Mensaje enviado", {
         description: "✅ Mensaje enviado correctamente",
-        variant: "default",
         duration: 4000,
       })
     } catch (error) {
@@ -57,16 +50,14 @@ export function useContactForm(): UseContactFormReturn {
         errorMessage,
       }))
 
-      toast({
-        title: "Error",
+      toast.error("Error", {
         description: `❌ ${errorMessage}`,
-        variant: "destructive",
         duration: 4000,
       })
 
       console.error('Contact form error:', error)
     }
-  }, [toast])
+  }, [])
 
   const resetForm = useCallback(() => {
     setState({

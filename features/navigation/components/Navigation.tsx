@@ -14,7 +14,6 @@ interface NavigationProps {
 export const Navigation = ({ currentSection }: NavigationProps) => {
   const { currentTheme } = useContext(ThemeContext)
 
-  const navItems = ["Inicio", "Sobre mí", "Habilidades", "Experiencia", "Educación", "Contacto"]
 
   return (
     <motion.nav
@@ -32,31 +31,16 @@ export const Navigation = ({ currentSection }: NavigationProps) => {
         >
           Javier Esparza
         </motion.div>
-        
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
-              whileHover={{ scale: 1.1 }}
-              className={`hover:${currentTheme.text} transition-colors cursor-pointer relative ${
-                currentSection === item.toLowerCase().replace(" ", "-") ? currentTheme.text : ""
-              }`}
-            >
-              {item}
-              {currentSection === item.toLowerCase().replace(" ", "-") && (
-                <motion.div
-                  layoutId="activeSection"
-                  className={`absolute -bottom-1 left-0 right-0 h-0.5 ${currentTheme.particle}`}
-                />
-              )}
-            </motion.a>
-          ))}
-        </div>
-        
+
         <div className="flex items-center gap-3">
           <ColorPicker />
           <Button
+            onClick={() => {
+              const contactSection = document.getElementById('contact-section')
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' })
+              }
+            }}
             className={`bg-gradient-to-r ${currentTheme.button} ${currentTheme.buttonHover} border ${currentTheme.border}`}
           >
             <Mail className="w-4 h-4 mr-2" />
