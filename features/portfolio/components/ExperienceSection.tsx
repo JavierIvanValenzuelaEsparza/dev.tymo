@@ -78,7 +78,7 @@ export const ExperienceSection = () => {
                           {exp.period}
                         </span>
                       </div>
-                      <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
+                      <p className="text-gray-300 mb-6 leading-relaxed text-justify">{exp.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {exp.tags.map((tag) => (
                           <Badge

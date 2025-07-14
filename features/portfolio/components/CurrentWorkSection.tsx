@@ -36,7 +36,7 @@ export function CurrentWorkSection() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>G-GLOBAL LOGISTICS INC.</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed text-justify">
                   Actualmente trabajo en G Global, donde implemento nuevas funcionalidades y corrijo errores en el
                   sistema WMS. Desarrollo múltiples mejoras y optimizaciones utilizando React y Moleculer.js en una
                   arquitectura de microservicios.
