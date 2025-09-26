@@ -93,7 +93,7 @@ export const ExperienceSection = () => {
                     <div className="md:w-1/3 flex justify-center items-center">
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
-                        className={`w-24 h-24 bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} rounded-full flex items-center justify-center border ${currentTheme.border} overflow-hidden`}
+                        className={`w-24 h-24 bg-white  rounded-full flex items-center justify-center border ${currentTheme.border} overflow-hidden`}
                       >
                         {exp.logo ? (
                           <Image

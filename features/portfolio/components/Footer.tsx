@@ -22,7 +22,7 @@ export function Footer() {
             >
               Javier Ivan Valenzuela Esparza
             </h3>
-            <p className="text-gray-400">Desarrollador Web Especializado</p>
+            <p className="text-gray-400">Software Developer</p>
           </div>
           <div className="flex space-x-4">
             {[

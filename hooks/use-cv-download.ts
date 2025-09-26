@@ -26,7 +26,6 @@ export function useCVDownload(): CVDownloadHook {
       link.click()
       document.body.removeChild(link)
       
-      // Pequeño delay para mostrar el estado de descarga
       await new Promise(resolve => setTimeout(resolve, 500))
     } finally {
       setIsDownloading(false)

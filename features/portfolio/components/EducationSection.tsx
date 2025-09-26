@@ -43,13 +43,15 @@ export function EducationSection() {
         >
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-3xl font-bold mb-4 text-white">Ingeniería En Desarrollo Y Gestión De Software</h3>
+              <h3 className="text-3xl font-bold mb-4 text-white">
+                Ingeniería En Desarrollo Y Gestión De Software
+              </h3>
               <p className={`${currentTheme.text} text-xl mb-8 font-semibold`}>
                 Universidad Tecnológica de Tijuana
               </p>
 
               <h4 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>Certificaciones</h4>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className={`flex items-center gap-3 p-4 ${currentTheme.bg} rounded-lg border ${currentTheme.border}`}
@@ -57,8 +59,16 @@ export function EducationSection() {
                   <Award className={`w-6 h-6 ${currentTheme.text}`} />
                   <span className="text-gray-300 font-medium">Certificación ITEP B1</span>
                 </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className={`flex items-center gap-3 p-4 ${currentTheme.bg} rounded-lg border ${currentTheme.border}`}
+                >
+                  <Award className={`w-6 h-6 ${currentTheme.text}`} />
+                  <span className="text-gray-300 font-medium">EC0935- Gestión de trabajo por proyectos</span>
+                </motion.div>
               </div>
             </div>
+
             <div className="flex justify-center items-center">
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}

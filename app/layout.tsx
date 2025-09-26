@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Javier Esparza | Desarrollador Web",
+  title: "Javier Esparza | Software Developer",
   icons: {
     icon: '/icon.png',
     shortcut: '/icon.png',
@@ -27,8 +27,6 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#000000" />
       </head>

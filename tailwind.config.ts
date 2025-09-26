@@ -14,6 +14,9 @@ const config: Config = {
     "./lib/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}"
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   safelist: [
     {
       pattern: /(bg|text|border|from|to|shadow)-(emerald|blue|purple|red|orange|cyan|teal|indigo|violet|rose|amber|yellow|sky|fuchsia|pink)-(100|200|300|400|500|600|700|800|900)/,
@@ -22,7 +25,7 @@ const config: Config = {
       pattern: /(border|hover:border)-(emerald|blue|purple|red|orange|cyan|teal|indigo|violet|rose|amber|yellow|sky|fuchsia|pink)-(400|500)\/?(10|20|25|50)?/,
     },
     {
-      pattern: /(hover:bg|hover:from|hover:to)-(emerald|blue|purple|red|orange|cyan|teal|indigo|violet|rose|amber|yellow|sky|fuchsia|pink)-(400|500|600|700)/,
+      pattern: /hover:(bg|from|to)-(emerald|blue|purple|red|orange|cyan|teal|indigo|violet|rose|amber|yellow|sky|fuchsia|pink)-(400|500|600|700)/,
     },
     {
       pattern: /w-(1|2|3|4|5|6|10|12)/,

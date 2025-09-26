@@ -55,7 +55,7 @@ export const HeroSection = () => {
                 className={`bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} border ${currentTheme.border} ${currentTheme.text} px-6 py-2 text-lg`}
               >
                 <Code className="w-4 h-4 mr-2" />
-                Desarrollador Web
+                Software Developer
               </Badge>
             </motion.div>
 
@@ -210,7 +210,10 @@ export const HeroSection = () => {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/timito.jpg-j4tXvqn3If4apX4re6i5iA1tTgDwkC.jpeg"
                   alt="Javier Ivan Valenzuela Esparza"
                   fill
+                  sizes="(max-width: 768px) 280px, 320px"
                   className="object-cover"
+                  priority
+                  fetchPriority="high"
                 />
                 <div
                   className={`absolute inset-0 bg-gradient-to-t from-${currentTheme.primary}-900/20 to-transparent`}

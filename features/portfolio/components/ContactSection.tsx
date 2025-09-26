@@ -35,7 +35,7 @@ export function ContactSection() {
             ¡Hablemos!
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-sm sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            Estoy interesado en oportunidades de trabajo como desarrollador web. Si tienes alguna pregunta o quieres
+            Estoy interesado en oportunidades de trabajo como Desarrollador de Software. Si tienes alguna pregunta o quieres
             hablar sobre un proyecto, no dudes en contactarme.
           </p>
         </motion.div>

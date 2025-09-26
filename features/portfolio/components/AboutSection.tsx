@@ -48,7 +48,7 @@ export function AboutSection() {
             <div>
               <h3 className={`text-2xl font-bold mb-6 ${currentTheme.text}`}>Mi Pasión por el Desarrollo</h3>
               <p className="text-lg mb-6 text-gray-300 text-justify leading-relaxed">
-                Desarrollador web con experiencia en Sistemas WMS y Sistemas ERP. Me especializo en crear
+                Desarrollador de Software con experiencia en Sistemas WMS y Sistemas ERP. Me especializo en crear
                 soluciones eficientes y escalables utilizando tecnologías modernas. Mi enfoque se centra en la
                 calidad del código y la optimización de procesos para garantizar el mejor rendimiento.
               </p>
@@ -65,6 +65,7 @@ export function AboutSection() {
                     </a>
                   </div>
                 </motion.div>
+
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className={`flex items-center gap-3 p-4 ${currentTheme.bg} rounded-lg border ${currentTheme.border}`}

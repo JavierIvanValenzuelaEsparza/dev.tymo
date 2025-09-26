@@ -48,3 +48,17 @@ export interface SocialLink {
   href: string
   label: string
 }
+
+export interface Project {
+  id: number
+  title: string
+  description: string
+  longDescription: string
+  image: string
+  technologies: string[]
+  githubUrl?: string
+  liveUrl?: string
+  category: 'web' | 'mobile' | 'desktop' | 'api'
+  status: 'completed' | 'in-progress' | 'planning'
+  featured: boolean
+}
