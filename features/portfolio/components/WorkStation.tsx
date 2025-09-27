@@ -111,7 +111,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                                 className={`inline-flex items-center gap-2 text-sm ${currentTheme.text} hover:text-${currentTheme.primary} transition-colors group/link`}
                             >
                                 <Github className="w-4 h-4" />
-                                <span>Código</span>
+                                <a href={project.githubUrl}>Código</a>
                                 <ArrowUpRight className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                             </a>
                         )}
