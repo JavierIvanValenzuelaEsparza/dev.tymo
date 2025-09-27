@@ -224,7 +224,7 @@ export const WorkStation = () => {
                 />
 
                 {featuredProjects.length > 0 && (
-                    <div className="mb-16">acados
+                    <div className="mb-16">
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                             {featuredProjects.map((project, index) => (
                                 <ProjectCard key={project.id} project={project} index={index} />
