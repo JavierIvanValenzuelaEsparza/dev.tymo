@@ -93,7 +93,7 @@ export const projects: Project[] = [
     longDescription: "Lideré el desarrollo de sistemas para JL Concretos y Urbanizadora Roma, implementando gestión de clientes, autenticación segura con Outlook y sistema automatizado de generación de documentos.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     technologies: ["PHP", "MySQL", "AJAX", "JavaScript", "HTML5"],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
+    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza/JLUsers-Admin",
     category: "web",
     status: "completed",
     featured: true
