@@ -15,6 +15,33 @@ import {
 import GGlobalLogo from "@/img/G-Global.webp"
 import JLConcretosLogo from "@/img/JL.png"
 import CaretSWIndLogo from "@/img/Caret.png"
+import Login from "@/img/Projects/LiveChat/login.png"
+import Sale from "@/img/Projects/LiveChat/sale.png"
+import ChatIsrael from "@/img/Projects/LiveChat/chatIsrael.png"
+import ChatHumberto from "@/img/Projects/LiveChat/chatHumberto.png"
+
+import IncidentsLogin from "@/img/Projects/Incidents/login.png"
+import IncidentsMain from "@/img/Projects/Incidents/incidents.png"
+import IncidentsComments from "@/img/Projects/Incidents/comments.png"
+import IncidentsCancel from "@/img/Projects/Incidents/cancel.png"
+import IncidentsHistory from "@/img/Projects/Incidents/history.png"
+import IncidentsUsers from "@/img/Projects/Incidents/users.png"
+import IncidentsMachines from "@/img/Projects/Incidents/machines.png"
+import IncidentsPhases from "@/img/Projects/Incidents/phases.png"
+import IncidentsQR from "@/img/Projects/Incidents/qr.png"
+
+import IncidentsDashboardActive from "@/img/Projects/Incidents/Dashboard/activeIncidents.png"
+import IncidentsDashboardCommon from "@/img/Projects/Incidents/Dashboard/commonProblems.png"
+import IncidentsDashboardByYear from "@/img/Projects/Incidents/Dashboard/byYear.png"
+import IncidentsDashboardByState from "@/img/Projects/Incidents/Dashboard/byState.png"
+import IncidentsDashboardTrend from "@/img/Projects/Incidents/Dashboard/trendEvolution.png"
+
+import IncidentsMovilLogin from "@/img/Projects/Incidents/Movil/login.png"
+import IncidentsMovilList from "@/img/Projects/Incidents/Movil/incidentList.png"
+import IncidentsMovilDetail from "@/img/Projects/Incidents/Movil/incident.png"
+import IncidentsMovilScan from "@/img/Projects/Incidents/Movil/scan.png"
+
+import PersonalPortfolio from "@/img/Projects/Portfolio/PersonalPortfolio.png"
 
 export const skillsWithIcons: Skill[] = [
   { name: "React Js", percentage: 85, icon: SiReact },
@@ -79,7 +106,7 @@ export const projects: Project[] = [
     title: "Sistema WMS - G Global Logistics",
     description: "Sistema de gestión de almacenes con arquitectura de microservicios y interfaz moderna",
     longDescription: "Desarrollo completo de un sistema WMS utilizando React, Moleculer.js y MongoDB. Implementé nuevas funcionalidades, corregí errores críticos y optimicé el rendimiento del sistema siguiendo metodologías ágiles.",
-    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop",
+    image: ["https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"],
     technologies: ["React", "Moleculer.js", "MongoDB", "Node.js", "Microservicios"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
     category: "web",
@@ -91,7 +118,7 @@ export const projects: Project[] = [
     title: "Portal Empresarial - JL Concretos",
     description: "Sistema de gestión empresarial con autenticación Outlook y generación de documentos",
     longDescription: "Lideré el desarrollo de sistemas para JL Concretos y Urbanizadora Roma, implementando gestión de clientes, autenticación segura con Outlook y sistema automatizado de generación de documentos.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    image: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"],
     technologies: ["PHP", "MySQL", "AJAX", "JavaScript", "HTML5"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza/JLUsers-Admin",
     category: "web",
@@ -103,7 +130,7 @@ export const projects: Project[] = [
     title: "CARET ERP - Módulos Integrados",
     description: "Sistema ERP para gestión de inventario y pedidos de ropa industrial",
     longDescription: "Desarrollo e integración de módulos clave incluyendo Reportes, Productos y Pedidos. Realicé pruebas exhaustivas y optimización para gestionar más de 400 productos garantizando calidad y coherencia del sistema.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"],
     technologies: ["ASP.NET", "Angular", "C#", "SQL Server", "TypeScript"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
     category: "web",
@@ -115,37 +142,54 @@ export const projects: Project[] = [
     title: "Portfolio Personal",
     description: "Portafolio personal desarrollado con Next.js y animaciones fluidas",
     longDescription: "Sitio web personal construido con las últimas tecnologías web, featuring sistema de temas dinámico, animaciones suaves con Framer Motion y diseño responsive completamente optimizado.",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+    image: [PersonalPortfolio],
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
-    liveUrl: "https://javiervalenzuela.dev",
     category: "web",
     status: "completed",
     featured: false
   },
   {
     id: 5,
-    title: "API REST Empresarial",
-    description: "API robusta para gestión de recursos empresariales con documentación completa",
-    longDescription: "Desarrollo de API REST escalable con autenticación JWT, validación de datos, manejo de errores robusto y documentación automatizada. Incluye testing completo y deploy automatizado.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-    technologies: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
+    title: "Live-Chat App",
+    description: "Aplicación de mensajería instantánea con salas, historial y edición de mensajes",
+    longDescription: "Desarrollo de API REST escalable con autenticación JWT, validación de datos, manejo de errores robusto.",
+    image: [Login, Sale, ChatIsrael, ChatHumberto],
+    technologies: ["NestJs", "MongoDB", "JWT", "ReactJs", "TypeScript", "Tailwind CSS", "Socket.io", "Tanstack Query"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
-    category: "api",
+    category: "web",
     status: "completed",
     featured: false
   },
   {
     id: 6,
-    title: "Dashboard Analytics",
-    description: "Dashboard interactivo para análisis de datos empresariales en tiempo real",
-    longDescription: "Plataforma de análisis con visualizaciones interactivas, reportes personalizados y actualización en tiempo real. Incluye integración con múltiples fuentes de datos y exportación de reportes.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    technologies: ["React", "D3.js", "Chart.js", "Firebase", "Material-UI"],
+    title: "Incident Management System",
+    description: "Plataforma para reportar para gestión de incidentes dentro de empresas",
+    longDescription: "Plataforma para permitir a los empleados de cada empresa reportar problemas de mantenimiento, como fallos en equipos o instalaciones, y asignar tareas a los responsables para su resolución.",
+    image: [
+      IncidentsLogin,
+      IncidentsMain,
+      IncidentsComments,
+      IncidentsHistory,
+      IncidentsCancel,
+      IncidentsUsers,
+      IncidentsMachines,
+      IncidentsPhases,
+      IncidentsQR,
+      IncidentsDashboardActive,
+      IncidentsDashboardCommon,
+      IncidentsDashboardByYear,
+      IncidentsDashboardByState,
+      IncidentsDashboardTrend,
+      IncidentsMovilLogin,
+      IncidentsMovilList,
+      IncidentsMovilDetail,
+      IncidentsMovilScan
+    ],
+    technologies: ["ReactJs", "Moleculer.js", "PostgreSQL", "Node.js", "Tanstack Query"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
-    liveUrl: "https://dashboard-demo.com",
     category: "web",
-    status: "in-progress",
+    status: "completed",
     featured: false
   }
 ]
