@@ -46,7 +46,7 @@ import PersonalPortfolio from "@/img/Projects/Portfolio/PersonalPortfolio.png"
 import JLConcretosForm from "@/img/Projects/JLConcretos/form.png"
 
 import SmartPipesLogin from "@/img/Projects/SmartPipes/login.png"
-import SmartPipesDashboard from "@/img/Projects/SmartPipes/dashboard.png"
+import SmartPipesDashboard from "@/img/Projects/SmartPipes/Dashboard.png"
 import SmartPipesInventory from "@/img/Projects/SmartPipes/Inventory.png"
 import SmartPipesProductionLine from "@/img/Projects/SmartPipes/ProductionLine.png"
 import SmartPipesProduction from "@/img/Projects/SmartPipes/Production.png"
@@ -55,7 +55,7 @@ import SmartPipesRestock from "@/img/Projects/SmartPipes/Restock.png"
 import SmartPipesSales from "@/img/Projects/SmartPipes/Sales.png"
 import SmartPipesStock from "@/img/Projects/SmartPipes/Stock.png"
 
-import FinancialComingSoon from "@/img/Projects/Financial/comingSoon.png"
+import FinancialComingSoon from "@/img/Projects/Financial/ComingSoon.png"
 
 export const skillsWithIcons: Skill[] = [
   { name: "React Js", percentage: 85, icon: SiReact },
