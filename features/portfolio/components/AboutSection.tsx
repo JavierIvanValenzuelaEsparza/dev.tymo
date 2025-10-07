@@ -60,8 +60,8 @@ export function AboutSection() {
                   <Phone className={`${currentTheme.text} flex-shrink-0`} />
                   <div>
                     <p className="text-sm text-gray-400">Teléfono</p>
-                    <a href="tel:6646141705" className={`hover:${currentTheme.text} transition-colors font-medium`}>
-                      664-614-1705
+                    <a href="tel:6634089996" className={`hover:${currentTheme.text} transition-colors font-medium`}>
+                      663-408-9996
                     </a>
                   </div>
                 </motion.div>
@@ -71,11 +71,11 @@ export function AboutSection() {
                   className={`flex items-center gap-3 p-4 ${currentTheme.bg} rounded-lg border ${currentTheme.border}`}
                 >
                   <Mail className={`${currentTheme.text} flex-shrink-0`} />
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-sm text-gray-400">Email</p>
                     <a
                       href="mailto:javiervalenzuela041219@gmail.com"
-                      className={`hover:${currentTheme.text} transition-colors font-medium text-sm`}
+                      className={`hover:${currentTheme.text} transition-colors font-medium text-xs sm:text-sm break-all`}
                     >
                       javiervalenzuela041219@gmail.com
                     </a>
@@ -126,7 +126,7 @@ export function AboutSection() {
                     </div>
                     <Button
                       variant="outline"
-                      className={`w-full border-${currentTheme.primary}-400 ${currentTheme.text} hover:bg-${currentTheme.primary}-400 hover:text-black ${currentTheme.bg} transition-all duration-200 hover:shadow-lg hover:shadow-${currentTheme.primary}-400/20`}
+                      className={`w-full border-${currentTheme.primary}-400 ${currentTheme.text} hover:bg-${currentTheme.primary}-400 ${currentTheme.bg} transition-all duration-200 hover:shadow-lg hover:shadow-${currentTheme.primary}-400/20`}
                       onClick={downloadLightCV}
                       disabled={isDownloading}
                     >
@@ -165,7 +165,7 @@ export function AboutSection() {
                     </div>
                     <Button
                       variant="outline"
-                      className={`w-full border-${currentTheme.primary}-400 ${currentTheme.text} hover:bg-${currentTheme.primary}-400 hover:text-black ${currentTheme.bg} transition-all duration-200 hover:shadow-lg hover:shadow-${currentTheme.primary}-400/20`}
+                      className={`w-full border-${currentTheme.primary}-400 ${currentTheme.text} hover:bg-${currentTheme.primary}-400 ${currentTheme.bg} transition-all duration-200 hover:shadow-lg hover:shadow-${currentTheme.primary}-400/20`}
                       onClick={downloadDarkCV}
                       disabled={isDownloading}
                     >

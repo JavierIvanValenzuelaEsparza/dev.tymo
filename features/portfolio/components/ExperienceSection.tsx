@@ -48,65 +48,63 @@ export const ExperienceSection = () => {
               className="group"
             >
               <Card
-                className={`bg-gray-900/50 backdrop-blur-lg border ${currentTheme.border} ${currentTheme.borderHover} transition-all duration-300 overflow-hidden group-hover:shadow-2xl group-hover:${currentTheme.shadow}`}
+                className={`bg-gray-900/50 backdrop-blur-lg border ${currentTheme.border} ${currentTheme.borderHover} transition-all duration-300 overflow-hidden group-hover:shadow-2xl group-hover:${currentTheme.shadow} relative`}
               >
                 <CardContent className="p-8">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-2/3">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h3
-                          className={`text-2xl font-bold text-white group-hover:${currentTheme.text} transition-colors`}
-                        >
-                          {exp.company}
-                        </h3>
-                        {exp.current && (
-                          <Badge className="bg-green-500/20 text-green-400 border border-green-500/30">
-                            <motion.span
-                              className="w-2 h-2 bg-green-500 rounded-full mr-2 inline-block"
-                              animate={{ opacity: [1, 0.3, 1] }}
-                              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                            />
-                            Actual
-                          </Badge>
-                        )}
-                      </div>
-                      <div className={`flex items-center gap-4 mb-4 ${currentTheme.text}`}>
-                        <span className="font-semibold">{exp.position}</span>
-                        <span className="text-gray-400">•</span>
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {exp.period}
-                        </span>
-                      </div>
-                      <p className="text-gray-300 mb-6 leading-relaxed text-justify">{exp.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.tags.map((tag) => (
-                          <Badge
-                            key={tag}
-                            className={`${currentTheme.bg} ${currentTheme.text} border ${currentTheme.border}`}
-                          >
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="md:w-1/3 flex justify-center items-center">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className={`w-24 h-24 bg-white  rounded-full flex items-center justify-center border ${currentTheme.border} overflow-hidden`}
+                  {/* Logo en esquina superior derecha */}
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="absolute top-6 right-6 w-16 h-16 opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                  >
+                    {exp.logo ? (
+                      <Image
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        width={64}
+                        height={64}
+                        className="object-contain"
+                      />
+                    ) : (
+                      <Briefcase className="w-full h-full text-gray-400" />
+                    )}
+                  </motion.div>
+
+                  <div className="pr-20">
+                    <div className="flex items-center gap-4 mb-4">
+                      <h3
+                        className={`text-2xl font-bold text-white group-hover:${currentTheme.text} transition-colors`}
                       >
-                        {exp.logo ? (
-                          <Image
-                            src={exp.logo}
-                            alt={`${exp.company} logo`}
-                            width={118}
-                            height={118}
-                            className="object-contain"
+                        {exp.company}
+                      </h3>
+                      {exp.current && (
+                        <Badge className="bg-green-500/20 text-green-400 border border-green-500/30">
+                          <motion.span
+                            className="w-2 h-2 bg-green-500 rounded-full mr-2 inline-block"
+                            animate={{ opacity: [1, 0.3, 1] }}
+                            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                           />
-                        ) : (
-                          <Briefcase className={`w-12 h-12 ${currentTheme.text}`} />
-                        )}
-                      </motion.div>
+                          Actual
+                        </Badge>
+                      )}
+                    </div>
+                    <div className={`flex items-center gap-4 mb-4 ${currentTheme.text}`}>
+                      <span className="font-semibold">{exp.position}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {exp.period}
+                      </span>
+                    </div>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-justify">{exp.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          className={`${currentTheme.bg} ${currentTheme.text} border ${currentTheme.border}`}
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
                     </div>
                   </div>
                 </CardContent>

@@ -43,6 +43,20 @@ import IncidentsMovilScan from "@/img/Projects/Incidents/Movil/scan.png"
 
 import PersonalPortfolio from "@/img/Projects/Portfolio/PersonalPortfolio.png"
 
+import JLConcretosForm from "@/img/Projects/JLConcretos/form.png"
+
+import SmartPipesLogin from "@/img/Projects/SmartPipes/login.png"
+import SmartPipesDashboard from "@/img/Projects/SmartPipes/dashboard.png"
+import SmartPipesInventory from "@/img/Projects/SmartPipes/Inventory.png"
+import SmartPipesProductionLine from "@/img/Projects/SmartPipes/ProductionLine.png"
+import SmartPipesProduction from "@/img/Projects/SmartPipes/Production.png"
+import SmartPipesReceipts from "@/img/Projects/SmartPipes/Receipts.png"
+import SmartPipesRestock from "@/img/Projects/SmartPipes/Restock.png"
+import SmartPipesSales from "@/img/Projects/SmartPipes/Sales.png"
+import SmartPipesStock from "@/img/Projects/SmartPipes/Stock.png"
+
+import FinancialComingSoon from "@/img/Projects/Financial/comingSoon.png"
+
 export const skillsWithIcons: Skill[] = [
   { name: "React Js", percentage: 85, icon: SiReact },
   { name: "Node Js", percentage: 70, icon: SiNodedotjs },
@@ -103,14 +117,14 @@ export const socialLinks: SocialLink[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Sistema WMS - G Global Logistics",
-    description: "Sistema de gestión de almacenes con arquitectura de microservicios y interfaz moderna",
-    longDescription: "Desarrollo completo de un sistema WMS utilizando React, Moleculer.js y MongoDB. Implementé nuevas funcionalidades, corregí errores críticos y optimicé el rendimiento del sistema siguiendo metodologías ágiles.",
-    image: ["https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop"],
-    technologies: ["React", "Moleculer.js", "MongoDB", "Node.js", "Microservicios"],
+    title: "Personal SFM - Financial Manager",
+    description: "",
+    longDescription: "",
+    image: [FinancialComingSoon],
+    technologies: [],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
     category: "web",
-    status: "completed",
+    status: "in-progress",
     featured: true
   },
   {
@@ -118,7 +132,7 @@ export const projects: Project[] = [
     title: "Portal Empresarial - JL Concretos",
     description: "Sistema de gestión empresarial con autenticación Outlook y generación de documentos",
     longDescription: "Lideré el desarrollo de sistemas para JL Concretos y Urbanizadora Roma, implementando gestión de clientes, autenticación segura con Outlook y sistema automatizado de generación de documentos.",
-    image: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"],
+    image: [JLConcretosForm],
     technologies: ["PHP", "MySQL", "AJAX", "JavaScript", "HTML5"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza/JLUsers-Admin",
     category: "web",
@@ -127,11 +141,21 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "CARET ERP - Módulos Integrados",
-    description: "Sistema ERP para gestión de inventario y pedidos de ropa industrial",
-    longDescription: "Desarrollo e integración de módulos clave incluyendo Reportes, Productos y Pedidos. Realicé pruebas exhaustivas y optimización para gestionar más de 400 productos garantizando calidad y coherencia del sistema.",
-    image: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"],
-    technologies: ["ASP.NET", "Angular", "C#", "SQL Server", "TypeScript"],
+    title: "SmartPipes Hydroponic-Systems WMS",
+    description: "Sistema de Inventario y Linea de Producción de Cultivos Hidropónicos",
+    longDescription: "Desarrollo e integración de módulos clave incluyendo Reportes, Productos, Lineas de Producción y Pedidos de Productos.",
+    image: [
+      SmartPipesLogin,
+      SmartPipesDashboard,
+      SmartPipesInventory,
+      SmartPipesProductionLine,
+      SmartPipesProduction,
+      SmartPipesReceipts,
+      SmartPipesRestock,
+      SmartPipesSales,
+      SmartPipesStock
+    ],
+    technologies: ["Django", "React", "PostgreSQL", "REST API"],
     githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
     category: "web",
     status: "completed",

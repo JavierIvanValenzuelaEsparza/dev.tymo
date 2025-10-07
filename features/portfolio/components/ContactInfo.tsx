@@ -18,8 +18,8 @@ const contactData: ContactInfo[] = [
   {
     icon: Phone,
     label: "Teléfono",
-    value: "664-614-1705",
-    href: "tel:6646141705",
+    value: "663-408-9996",
+    href: "tel:6634089996",
   },
   {
     icon: Mail,
@@ -30,7 +30,7 @@ const contactData: ContactInfo[] = [
   {
     icon: MapPin,
     label: "Ubicación",
-    value: "Tijuana, México",
+    value: "Tijuana, Baja California, México",
     href: "#",
   },
 ]
