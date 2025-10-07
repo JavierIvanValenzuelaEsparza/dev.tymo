@@ -43,9 +43,9 @@ import IncidentsMovilScan from "@/img/Projects/Incidents/Movil/scan.png"
 
 import PersonalPortfolio from "@/img/Projects/Portfolio/PersonalPortfolio.png"
 
-import JLConcretosForm from "@/img/Projects/JLConcretos/form.png"
+import JLConcretosForm from "@/img/Projects/JLConcretos/Form.png"
 
-import SmartPipesLogin from "@/img/Projects/SmartPipes/login.png"
+import SmartPipesLogin from "@/img/Projects/SmartPipes/Login.png"
 import SmartPipesDashboard from "@/img/Projects/SmartPipes/Dashboard.png"
 import SmartPipesInventory from "@/img/Projects/SmartPipes/Inventory.png"
 import SmartPipesProductionLine from "@/img/Projects/SmartPipes/ProductionLine.png"
