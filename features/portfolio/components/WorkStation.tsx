@@ -1,4 +1,4 @@
-import { Briefcase, ExternalLink, Github, Calendar, Tag, ArrowUpRight, ChevronLeft, ChevronRight, X } from "lucide-react"
+import { Briefcase, Github, Calendar, Tag, ArrowUpRight, ChevronLeft, ChevronRight, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useContext, useState } from "react"
 import { Badge } from "@/components/ui/badge"
@@ -68,6 +68,7 @@ const ImageModal = ({ images, currentIndex, onClose, onNext, onPrev }: {
                         src={currentImage}
                         alt={`Imagen ${currentIndex + 1}`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-contain"
                     />
                 </motion.div>
@@ -162,6 +163,7 @@ const ProjectCard = ({ project, index, onImageClick }: {
                     <Image
                         src={currentImage}
                         alt={project.title}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         fill
                         className={`object-cover transition-all duration-700 group-hover:scale-110 ${
                             imageLoaded ? 'opacity-100' : 'opacity-0'
@@ -252,18 +254,6 @@ const ProjectCard = ({ project, index, onImageClick }: {
                             >
                                 <Github className="w-4 h-4" />
                                 <span>Código</span>
-                                <ArrowUpRight className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                            </a>
-                        )}
-                        {project.liveUrl && (
-                            <a
-                                href={project.liveUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`inline-flex items-center gap-2 text-sm ${currentTheme.text} hover:text-${currentTheme.primary} transition-colors group/link`}
-                            >
-                                <ExternalLink className="w-4 h-4" />
-                                <span>Ver Demo</span>
                                 <ArrowUpRight className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                             </a>
                         )}

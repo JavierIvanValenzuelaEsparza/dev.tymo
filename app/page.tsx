@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, Suspense, lazy } from "react"
+import { Suspense, lazy } from "react"
 import { ThemeProvider } from "@/shared/context"
 import { LazyLoadWrapper } from "@/shared/components"
 import { Navigation } from "@/features/navigation"
@@ -19,10 +19,8 @@ const Footer = lazy(() => import("@/features/portfolio/components/Footer").then(
 const AnimatedBackground = lazy(() => import("@/shared/components/AnimatedBackground").then(module => ({ default: module.AnimatedBackground })))
 
 export default function Portfolio() {
-  const [currentSection, setCurrentSection] = useState("inicio")
-  
+  const currentSection = "inicio"
   usePreloadComponents()
-
 
   return (
     <ThemeProvider>
@@ -35,6 +33,12 @@ export default function Portfolio() {
         <LazyLoadWrapper>
           <Suspense fallback={<div className="h-20 animate-pulse bg-gray-800/20" />}>
             <AboutSection />
+          </Suspense>
+        </LazyLoadWrapper>
+
+        <LazyLoadWrapper>
+          <Suspense fallback={<div className="h-20 animate-pulse bg-gray-800/20" />}>
+            <WorkStation />
           </Suspense>
         </LazyLoadWrapper>
         
@@ -59,12 +63,6 @@ export default function Portfolio() {
         <LazyLoadWrapper>
           <Suspense fallback={<div className="h-20 animate-pulse bg-gray-800/20" />}>
             <EducationSection />
-          </Suspense>
-        </LazyLoadWrapper>
-
-        <LazyLoadWrapper>
-          <Suspense fallback={<div className="h-20 animate-pulse bg-gray-800/20" />}>
-            <WorkStation />
           </Suspense>
         </LazyLoadWrapper>
         

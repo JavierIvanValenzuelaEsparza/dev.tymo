@@ -6,7 +6,7 @@ import {
   SiAngular,
   SiNextdotjs,
   SiLaravel,
-  SiDjango,
+  SiPython,
   SiMongodb,
   SiMysql,
   SiGithub,
@@ -55,18 +55,79 @@ import SmartPipesRestock from "@/img/Projects/SmartPipes/Restock.png"
 import SmartPipesSales from "@/img/Projects/SmartPipes/Sales.png"
 import SmartPipesStock from "@/img/Projects/SmartPipes/Stock.png"
 
-import FinancialComingSoon from "@/img/Projects/Financial/ComingSoon.png"
-
 export const skillsWithIcons: Skill[] = [
-  { name: "React Js", percentage: 85, icon: SiReact },
-  { name: "Node Js", percentage: 70, icon: SiNodedotjs },
-  { name: "Angular Js", percentage: 40, icon: SiAngular },
-  { name: "Next Js", percentage: 85, icon: SiNextdotjs },
-  { name: "Laravel", percentage: 60, icon: SiLaravel },
-  { name: "Django", percentage: 40, icon: SiDjango },
-  { name: "GitHub", percentage: 75, icon: SiGithub },
-  { name: "MongoDB", percentage: 65, icon: SiMongodb },
-  { name: "SQL", percentage: 70, icon: SiMysql },
+  { 
+    name: "React Js", 
+    percentage: 85, 
+    icon: SiReact,
+    category: "Frontend",
+    description: "Modern reactive UI library",
+    yearsOfExperience: 3
+  },
+  { 
+    name: "Node Js", 
+    percentage: 70, 
+    icon: SiNodedotjs,
+    category: "Backend",
+    description: "JavaScript runtime environment",
+    yearsOfExperience: 2
+  },
+  { 
+    name: "Angular Js", 
+    percentage: 40, 
+    icon: SiAngular,
+    category: "Frontend",
+    description: "Enterprise frontend framework",
+    yearsOfExperience: 1
+  },
+  { 
+    name: "Next Js", 
+    percentage: 85, 
+    icon: SiNextdotjs,
+    category: "Frontend",
+    description: "React production framework",
+    yearsOfExperience: 1
+  },
+  { 
+    name: "Laravel", 
+    percentage: 35, 
+    icon: SiLaravel,
+    category: "Backend",
+    description: "PHP web framework",
+    yearsOfExperience: 1
+  },
+  { 
+    name: "Python", 
+    percentage: 30, 
+    icon: SiPython,
+    category: "Backend",
+    description: "Python Programming Language",
+    yearsOfExperience: 1
+  },
+  { 
+    name: "GitHub", 
+    percentage: 90, 
+    icon: SiGithub,
+    category: "Tools",
+    description: "Version control platform",
+    yearsOfExperience: 4
+  },
+  { 
+    name: "MongoDB", 
+    percentage: 65, 
+    icon: SiMongodb,
+    category: "Database",
+    description: "NoSQL database",
+    yearsOfExperience: 3
+  },
+  { 
+    name: "SQL", 
+    percentage: 70, 
+    icon: SiMysql,
+    category: "Database",
+    description: "Relational database",
+    yearsOfExperience: 2
+  },
 ]
 
 
@@ -117,30 +178,17 @@ export const socialLinks: SocialLink[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Personal SFM - Financial Manager",
-    description: "",
-    longDescription: "",
-    image: [FinancialComingSoon],
-    technologies: [],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
-    category: "web",
-    status: "in-progress",
-    featured: true
-  },
-  {
-    id: 2,
     title: "Portal Empresarial - JL Concretos",
     description: "Sistema de gestión empresarial con autenticación Outlook y generación de documentos",
     longDescription: "Lideré el desarrollo de sistemas para JL Concretos y Urbanizadora Roma, implementando gestión de clientes, autenticación segura con Outlook y sistema automatizado de generación de documentos.",
     image: [JLConcretosForm],
     technologies: ["PHP", "MySQL", "AJAX", "JavaScript", "HTML5"],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza/JLUsers-Admin",
     category: "web",
     status: "completed",
     featured: true
   },
   {
-    id: 3,
+    id: 2,
     title: "SmartPipes Hydroponic-Systems WMS",
     description: "Sistema de Inventario y Linea de Producción de Cultivos Hidropónicos",
     longDescription: "Desarrollo e integración de módulos clave incluyendo Reportes, Productos, Lineas de Producción y Pedidos de Productos.",
@@ -156,37 +204,12 @@ export const projects: Project[] = [
       SmartPipesStock
     ],
     technologies: ["Django", "React", "PostgreSQL", "REST API"],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
     category: "web",
     status: "completed",
     featured: true
   },
-  {
-    id: 4,
-    title: "Portfolio Personal",
-    description: "Portafolio personal desarrollado con Next.js y animaciones fluidas",
-    longDescription: "Sitio web personal construido con las últimas tecnologías web, featuring sistema de temas dinámico, animaciones suaves con Framer Motion y diseño responsive completamente optimizado.",
-    image: [PersonalPortfolio],
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
-    category: "web",
-    status: "completed",
-    featured: false
-  },
-  {
-    id: 5,
-    title: "Live-Chat App",
-    description: "Aplicación de mensajería instantánea con salas, historial y edición de mensajes",
-    longDescription: "Desarrollo de API REST escalable con autenticación JWT, validación de datos, manejo de errores robusto.",
-    image: [Login, Sale, ChatIsrael, ChatHumberto],
-    technologies: ["NestJs", "MongoDB", "JWT", "ReactJs", "TypeScript", "Tailwind CSS", "Socket.io", "Tanstack Query"],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
-    category: "web",
-    status: "completed",
-    featured: false
-  },
-  {
-    id: 6,
+    {
+    id: 3,
     title: "Incident Management System",
     description: "Plataforma para reportar para gestión de incidentes dentro de empresas",
     longDescription: "Plataforma para permitir a los empleados de cada empresa reportar problemas de mantenimiento, como fallos en equipos o instalaciones, y asignar tareas a los responsables para su resolución.",
@@ -211,9 +234,30 @@ export const projects: Project[] = [
       IncidentsMovilScan
     ],
     technologies: ["ReactJs", "Moleculer.js", "PostgreSQL", "Node.js", "Tanstack Query"],
-    githubUrl: "https://github.com/JavierIvanValenzuelaEsparza",
+    category: "web",
+    status: "completed",
+    featured: true
+  },
+  {
+    id: 4,
+    title: "Portfolio Personal",
+    description: "Portafolio personal desarrollado con Next.js y animaciones fluidas",
+    longDescription: "Sitio web personal construido con las últimas tecnologías web, featuring sistema de temas dinámico, animaciones suaves con Framer Motion y diseño responsive completamente optimizado.",
+    image: [PersonalPortfolio],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     category: "web",
     status: "completed",
     featured: false
-  }
+  },
+  {
+    id: 5,
+    title: "Live-Chat App",
+    description: "Aplicación de mensajería instantánea con salas, historial y edición de mensajes",
+    longDescription: "Desarrollo de API REST escalable con autenticación JWT, validación de datos, manejo de errores robusto.",
+    image: [Login, Sale, ChatIsrael, ChatHumberto],
+    technologies: ["NestJs", "MongoDB", "JWT", "ReactJs", "TypeScript", "Tailwind CSS", "Socket.io", "Tanstack Query"],
+    category: "web",
+    status: "completed",
+    featured: false
+  },
 ]

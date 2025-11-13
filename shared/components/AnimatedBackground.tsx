@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "@/shared/context"
 
 interface AnimatedBackgroundProps {
@@ -10,6 +10,7 @@ interface AnimatedBackgroundProps {
 
 export const AnimatedBackground = ({ mousePosition }: AnimatedBackgroundProps) => {
   const { currentTheme } = useContext(ThemeContext)
+  const [particles, setParticles] = useState<{ left: string; top: string; delay: number; duration: number }[]>([])
 
   const getRgbaColor = (primary: string) => {
     const colorMap: Record<string, string> = {
@@ -25,27 +26,29 @@ export const AnimatedBackground = ({ mousePosition }: AnimatedBackgroundProps) =
 
   const rgbaColor = getRgbaColor(currentTheme.primary)
 
+  useEffect(() => {
+    const newParticles = Array.from({ length: 80 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: Math.random() * 2,
+      duration: 3 + Math.random() * 4,
+    }))
+    setParticles(newParticles)
+  }, [])
+
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {/* Gradient Orbs */}
       <motion.div
         className={`absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} rounded-full blur-3xl`}
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
+        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
       />
       <motion.div
         className={`absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r ${currentTheme.gradientTo} ${currentTheme.gradientFrom} rounded-full blur-3xl`}
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.4, 0.7, 0.4],
-        }}
+        animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
       />
 
-      {/* Mouse Follower */}
       <motion.div
         className="absolute inset-0"
         style={{
@@ -53,33 +56,21 @@ export const AnimatedBackground = ({ mousePosition }: AnimatedBackgroundProps) =
         }}
       />
 
-      {/* Floating Particles */}
-      {[...Array(80)].map((_, i) => (
+      {particles.map((p, i) => (
         <motion.div
           key={i}
           className={`absolute w-1 h-1 ${currentTheme.particle} rounded-full opacity-30`}
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.1, 0.8, 0.1],
-            scale: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: 3 + Math.random() * 4,
-            repeat: Number.POSITIVE_INFINITY,
-            delay: Math.random() * 2,
-          }}
+          style={{ left: p.left, top: p.top }}
+          animate={{ y: [0, -30, 0], opacity: [0.1, 0.8, 0.1], scale: [0.5, 1, 0.5] }}
+          transition={{ duration: p.duration, repeat: Number.POSITIVE_INFINITY, delay: p.delay }}
         />
       ))}
 
-      {/* Grid Pattern */}
       <div
         className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"
         style={{
-          backgroundImage: `linear-gradient(rgba(${rgbaColor}, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(${rgbaColor}, 0.03) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(${rgbaColor}, 0.03) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(${rgbaColor}, 0.03) 1px, transparent 1px)`,
         }}
       />
     </div>

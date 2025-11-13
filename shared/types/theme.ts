@@ -31,6 +31,9 @@ export interface Skill {
   name: string
   percentage: number
   icon: React.ElementType
+  category?: string
+  description?: string
+  yearsOfExperience?: number
 }
 
 export interface Experience {

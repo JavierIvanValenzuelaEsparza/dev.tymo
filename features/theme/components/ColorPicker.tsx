@@ -1,28 +1,70 @@
 "use client"
 
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Settings, Palette, X } from "lucide-react"
+import { Settings, Palette, X, Check, Sparkles } from "lucide-react"
 import { ThemeContext } from "@/shared/context"
 import { colorThemes } from "@/shared/constants"
 import { ColorTheme, ThemeName } from "@/shared/types/theme"
 
 export const ColorPicker = () => {
-  const { setTheme, themeName } = useContext(ThemeContext)
+  const { setTheme, themeName, currentTheme } = useContext(ThemeContext)
   const [isOpen, setIsOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Ajustar el estado isMobile para asegurar que se actualice correctamente
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    // Escuchar el evento resize y actualizar el estado
+    window.addEventListener("resize", checkMobile);
+
+    // Llamar a la función inicialmente para establecer el estado
+    checkMobile();
+
+    // Limpiar el evento al desmontar el componente
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const handleThemeChange = (key: ThemeName) => {
+    setTheme(key)
+    setTimeout(() => setIsOpen(false), 300)
+  }
 
   return (
     <div className="relative">
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        variant="outline"
-        size="sm"
-        className="border-gray-600 text-gray-400 hover:bg-gray-800 bg-gray-900/50 p-1.5 sm:p-2"
-        aria-label="Abrir selector de colores"
-      >
-        <Settings className="w-3 h-3 sm:w-4 sm:h-4" />
-      </Button>
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <Button
+          onClick={() => setIsOpen(!isOpen)}
+          variant="outline"
+          size="sm"
+          className={`relative overflow-hidden border-2 transition-all duration-300 ${isOpen
+              ? `${currentTheme.border} bg-gradient-to-r ${currentTheme.gradientFrom} ${currentTheme.gradientTo} text-white shadow-lg shadow-${currentTheme.primary}/25`
+              : "border-gray-700 bg-gray-900/80 text-gray-400"
+            } backdrop-blur-sm p-2 sm:p-2.5`}
+          aria-label="Abrir selector de colores"
+        >
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="relative z-10"
+          >
+            <Settings className="w-4 h-4 sm:w-5 sm:h-5" />
+          </motion.div>
+          {isOpen && (
+            <motion.div
+              layoutId="button-glow"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+              initial={{ x: "-100%" }}
+              animate={{ x: "100%" }}
+              transition={{ duration: 1, repeat: Infinity, repeatDelay: 0.5 }}
+            />
+          )}
+        </Button>
+      </motion.div>
 
       <AnimatePresence>
         {isOpen && (
@@ -31,65 +73,151 @@ export const ColorPicker = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-black/60 backdrop-blur-md z-40"
               onClick={() => setIsOpen(false)}
             />
+
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: -20 }}
-              className="absolute right-0 sm:right-0 top-12 bg-gray-900 border border-gray-700 rounded-xl p-4 sm:p-6 shadow-2xl z-50 w-[280px] sm:w-80 max-w-[calc(100vw-2rem)] 
-                         sm:max-w-none transform sm:transform-none -translate-x-1/2 sm:translate-x-0 left-1/2 sm:left-auto"
+              initial={
+                isMobile
+                  ? { opacity: 0, y: "100%" }
+                  : { opacity: 0, scale: 0.9, y: 10 }
+              }
+              animate={
+                isMobile
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 1, scale: 1, y: 0 }
+              }
+              exit={
+                isMobile
+                  ? { opacity: 0, y: "100%" }
+                  : { opacity: 0, scale: 0.9, y: 10 }
+              }
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className={`
+                fixed z-50
+                bg-gradient-to-b from-gray-900 via-gray-900 to-black
+                border border-gray-700/50
+                shadow-2xl
+                ${isMobile
+                  ? "bottom-0 left-0 right-0 rounded-t-3xl max-h-[90vh]"
+                  : "top-16 right-4 sm:right-6 rounded-2xl w-[340px] md:w-[380px]"
+                }
+              `}
+              style={{
+                boxShadow: `0 0 50px rgba(0, 0, 0, 0.5), 0 0 100px ${currentTheme.primary}20`,
+              }}
             >
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
-                <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-                  <Palette className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="hidden sm:inline">Personalizar Colores</span>
-                  <span className="sm:hidden">Colores</span>
-                </h3>
+              {isMobile && (
+                <div className="flex justify-center pt-3 pb-2">
+                  <div className="w-12 h-1.5 bg-gray-600 rounded-full" />
+                </div>
+              )}
+
+              {/* Contenido del modal */}
+              <div className="flex items-center justify-between px-5 sm:px-6 py-4 border-b border-gray-700/50">
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`p-2 rounded-xl bg-gradient-to-br ${currentTheme.gradientFrom} ${currentTheme.gradientTo}`}
+                  >
+                    <Palette className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                      Theme Picker
+                      <Sparkles className="w-4 h-4 text-yellow-400" />
+                    </h3>
+                    <p className="text-xs text-gray-400">Choose your color theme</p>
+                  </div>
+                </div>
                 <Button
                   onClick={() => setIsOpen(false)}
                   variant="ghost"
                   size="sm"
-                  className="text-gray-400 hover:text-white p-1"
+                  className="text-gray-400 hover:text-white hover:bg-gray-800 rounded-full p-2 transition-colors"
                   aria-label="Cerrar selector de colores"
                 >
-                  <X className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <X className="w-5 h-5" />
                 </Button>
               </div>
 
-              <div className="space-y-2 sm:space-y-3 max-h-[60vh] sm:max-h-none overflow-y-auto">
-                {Object.entries(colorThemes).map(([key, theme]: [string, ColorTheme]) => (
-                  <motion.button
-                    key={key}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => {
-                      setTheme(key as ThemeName)
-                      setIsOpen(false)
-                    }}
-                    className={`w-full p-2 sm:p-3 rounded-lg border transition-all flex items-center gap-2 sm:gap-3 ${themeName === key
-                        ? `${theme.border} ${theme.bg} ${theme.text}`
-                        : "border-gray-700 hover:border-gray-600 text-gray-300 hover:bg-gray-800/50"
-                      }`}
-                  >
-                    <div
-                      className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-to-r ${theme.button.replace(
-                        "from-",
-                        "from-",
-                      )} ${theme.button.replace("to-", "to-")}`}
-                    />
-                    <span className="font-medium text-sm sm:text-base truncate flex-1 text-left">{theme.name}</span>
-                    {themeName === key && <div className="ml-auto w-1.5 h-1.5 sm:w-2 sm:h-2 bg-current rounded-full flex-shrink-0" />}
-                  </motion.button>
-                ))}
+              {/* Opciones de tema */}
+              <div
+                className="px-4 sm:px-5 py-4 space-y-2 overflow-y-auto custom-scrollbar"
+                style={{
+                  maxHeight: isMobile ? "calc(90vh - 180px)" : "500px",
+                }}
+              >
+                {Object.entries(colorThemes).map(([key, theme]: [string, ColorTheme], index) => {
+                  const isSelected = themeName === key;
+                  return (
+                    <motion.button
+                      key={key}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      whileHover={{ scale: 1.02, x: 4 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => handleThemeChange(key as ThemeName)}
+                      className={`
+                        group relative w-full p-4 rounded-xl border-2 transition-all duration-300
+                        flex items-center gap-4 overflow-hidden
+                        ${isSelected
+                          ? `border-${theme.primary} bg-gradient-to-r ${theme.gradientFrom}/10 ${theme.gradientTo}/10 shadow-lg shadow-${theme.primary}/20`
+                          : "border-gray-700/50 hover:border-gray-600 bg-gray-800/30 hover:bg-gray-800/50"
+                        }
+                      `}
+                    >
+                      <div className="relative flex-shrink-0">
+                        <div
+                          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} shadow-lg`}
+                          style={{
+                            boxShadow: isSelected
+                              ? `0 0 20px ${theme.primary}40`
+                              : "none",
+                          }}
+                        />
+                        {isSelected && (
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            className="absolute inset-0 flex items-center justify-center"
+                          >
+                            <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                              <Check className={`w-4 h-4 text-${theme.primary}`} />
+                            </div>
+                          </motion.div>
+                        )}
+                      </div>
+
+                      <div className="flex-1 text-left">
+                        <div className="font-semibold text-white text-base mb-0.5 flex items-center gap-2">
+                          {theme.name}
+                          {isSelected && (
+                            <motion.span
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              className={`text-xs px-2 py-0.5 rounded-full bg-gradient-to-r ${theme.gradientFrom} ${theme.gradientTo} text-white`}
+                            >
+                              Active
+                            </motion.span>
+                          )}
+                        </div>
+                        <p className="text-xs text-gray-400">
+                          {key.charAt(0).toUpperCase() + key.slice(1)} color scheme
+                        </p>
+                      </div>
+                    </motion.button>
+                  );
+                })}
               </div>
 
-              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-700">
-                <p className="text-xs text-gray-400 text-center leading-relaxed">
-                  <span className="hidden sm:inline">Los cambios se aplican inmediatamente y se guardan automáticamente</span>
-                  <span className="sm:hidden">Cambios automáticos</span>
-                </p>
+              <div className="px-5 sm:px-6 py-4 border-t border-gray-700/50 bg-gray-900/50">
+                <div className="flex items-center justify-center gap-2 text-xs text-gray-400">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span>Auto-saved instantly</span>
+                </div>
               </div>
             </motion.div>
           </>

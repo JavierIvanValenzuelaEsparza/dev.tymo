@@ -1,7 +1,7 @@
 "use client"
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import { ThemeContextType, ThemeName, ColorTheme } from '../types'
+import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react'
+import { ThemeContextType, ThemeName } from '../types'
 import { colorThemes } from '../constants'
 
 const ThemeContext = createContext<ThemeContextType>({
@@ -25,7 +25,6 @@ interface ThemeProviderProps {
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [themeName, setThemeName] = useState<ThemeName>("blue")
 
-  // Load theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("portfolio-theme") as ThemeName
     if (savedTheme && colorThemes[savedTheme]) {
@@ -33,16 +32,17 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     }
   }, [])
 
-  // Save theme to localStorage
-  const setTheme = (theme: ThemeName) => {
+  const setTheme = useCallback((theme: ThemeName) => {
     setThemeName(theme)
     localStorage.setItem("portfolio-theme", theme)
-  }
+  }, [])
 
   const currentTheme = colorThemes[themeName]
 
+  const value = useMemo(() => ({ currentTheme, setTheme, themeName }), [currentTheme, setTheme, themeName])
+
   return (
-    <ThemeContext.Provider value={{ currentTheme, setTheme, themeName }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   )

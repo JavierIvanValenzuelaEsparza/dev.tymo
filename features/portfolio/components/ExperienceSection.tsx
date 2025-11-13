@@ -50,11 +50,10 @@ export const ExperienceSection = () => {
               <Card
                 className={`bg-gray-900/50 backdrop-blur-lg border ${currentTheme.border} ${currentTheme.borderHover} transition-all duration-300 overflow-hidden group-hover:shadow-2xl group-hover:${currentTheme.shadow} relative`}
               >
-                <CardContent className="p-8">
-                  {/* Logo en esquina superior derecha */}
+                <CardContent className="p-6 md:p-8">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="absolute top-6 right-6 w-16 h-16 opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                    className="absolute top-6 right-6 w-12 h-12 md:w-16 md:h-16 opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                   >
                     {exp.logo ? (
                       <Image
@@ -62,6 +61,7 @@ export const ExperienceSection = () => {
                         alt={`${exp.company} logo`}
                         width={64}
                         height={64}
+                        sizes="64px"
                         className="object-contain"
                       />
                     ) : (
@@ -69,10 +69,10 @@ export const ExperienceSection = () => {
                     )}
                   </motion.div>
 
-                  <div className="pr-20">
+                  <div className="pr-0 md:pr-20">
                     <div className="flex items-center gap-4 mb-4">
                       <h3
-                        className={`text-2xl font-bold text-white group-hover:${currentTheme.text} transition-colors`}
+                        className={`text-xl md:text-2xl font-bold text-white group-hover:${currentTheme.text} transition-colors`}
                       >
                         {exp.company}
                       </h3>
@@ -87,20 +87,22 @@ export const ExperienceSection = () => {
                         </Badge>
                       )}
                     </div>
-                    <div className={`flex items-center gap-4 mb-4 ${currentTheme.text}`}>
-                      <span className="font-semibold">{exp.position}</span>
+                    <div className={`flex flex-wrap items-center gap-2 md:gap-4 mb-4 ${currentTheme.text}`}>
+                      <span className="font-semibold text-sm md:text-base">{exp.position}</span>
                       <span className="text-gray-400">•</span>
-                      <span className="flex items-center gap-1">
+                      <span className="flex items-center gap-1 text-sm md:text-base">
                         <Calendar className="w-4 h-4" />
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-justify">{exp.description}</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-justify text-sm md:text-base">
+                      {exp.description}
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {exp.tags.map((tag) => (
                         <Badge
                           key={tag}
-                          className={`${currentTheme.bg} ${currentTheme.text} border ${currentTheme.border}`}
+                          className={`${currentTheme.bg} ${currentTheme.text} border ${currentTheme.border} text-xs md:text-sm`}
                         >
                           {tag}
                         </Badge>

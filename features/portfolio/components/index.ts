@@ -1,5 +1,6 @@
 export * from './HeroSection'
 export * from './SkillsSection'
+export * from './SkillCard'
 export * from './ExperienceSection'
 export * from './AboutSection'
 export * from './CurrentWorkSection'
