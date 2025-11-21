@@ -70,21 +70,21 @@ export const ExperienceSection = () => {
                   </motion.div>
 
                   <div className="pr-0 md:pr-20">
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-4">
                       <h3
-                        className={`text-xl md:text-2xl font-bold text-white group-hover:${currentTheme.text} transition-colors`}
+                      className={`text-xl md:text-2xl font-bold text-white group-hover:${currentTheme.text} transition-colors`}
                       >
-                        {exp.company}
+                      {exp.company}
                       </h3>
                       {exp.current && (
-                        <Badge className="bg-green-500/20 text-green-400 border border-green-500/30">
-                          <motion.span
-                            className="w-2 h-2 bg-green-500 rounded-full mr-2 inline-block"
-                            animate={{ opacity: [1, 0.3, 1] }}
-                            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                          />
-                          Actual
-                        </Badge>
+                      <Badge className="bg-green-500/20 text-green-400 border border-green-500/30">
+                        <motion.span
+                        className="w-2 h-2 bg-green-500 rounded-full mr-2 inline-block"
+                        animate={{ opacity: [1, 0.3, 1] }}
+                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                        />
+                        Actual
+                      </Badge>
                       )}
                     </div>
                     <div className={`flex flex-wrap items-center gap-2 md:gap-4 mb-4 ${currentTheme.text}`}>
