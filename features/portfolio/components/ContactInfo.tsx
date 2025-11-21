@@ -35,7 +35,7 @@ const contactData: ContactInfo[] = [
   },
 ]
 
-export function ContactInfo({ className = '' }: ContactInfoProps) {
+export function ContactInfo({ className = '' }: Readonly<ContactInfoProps>) {
   const { currentTheme } = useContext(ThemeContext)
 
   return (
