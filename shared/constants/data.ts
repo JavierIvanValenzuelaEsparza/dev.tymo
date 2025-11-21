@@ -55,6 +55,9 @@ import SmartPipesRestock from "@/img/Projects/SmartPipes/Restock.png"
 import SmartPipesSales from "@/img/Projects/SmartPipes/Sales.png"
 import SmartPipesStock from "@/img/Projects/SmartPipes/Stock.png"
 
+import OpinionDark from "@/img/Projects/Opinions/OpinionsDark.png"
+import OpinionLight from "@/img/Projects/Opinions/OpinionsLight.png"
+
 export const skillsWithIcons: Skill[] = [
   { 
     name: "React Js", 
@@ -260,4 +263,15 @@ export const projects: Project[] = [
     status: "completed",
     featured: false
   },
+  {
+    id: 6,
+    title: "Portal Opinions Web",
+    description: "Plataforma para la recopilación de opiniones y reseñas de usuarios.",
+    longDescription: "Desarrollé un portal donde los usuarios pueden dejar reseñas sobre los servicios de desarrollo ofrecidos, proporcionando una interfaz intuitiva y atractiva para la recopilación de opiniones.",
+    image: [OpinionDark, OpinionLight],
+    technologies: ["React Js", "Nest Js", "TypeScript", "MySQL" ,"Tailwind CSS"],
+    category: "web",
+    status: "completed",
+    featured: false
+  }
 ]

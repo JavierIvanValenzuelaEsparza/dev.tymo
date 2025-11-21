@@ -14,6 +14,7 @@ const ExperienceSection = lazy(() => import("@/features/portfolio/components/Exp
 const EducationSection = lazy(() => import("@/features/portfolio/components/EducationSection").then(module => ({ default: module.EducationSection })))
 const WorkStation = lazy(() => import("@/features/portfolio/components/WorkStation").then(module => ({ default: module.WorkStation })))
 const ContactSection = lazy(() => import("@/features/portfolio/components/ContactSection").then(module => ({ default: module.ContactSection })))
+const TestimonialsSection = lazy(() => import("@/features/testimonials").then(module => ({ default: module.TestimonialsSection })))
 const Footer = lazy(() => import("@/features/portfolio/components/Footer").then(module => ({ default: module.Footer })))
 
 const AnimatedBackground = lazy(() => import("@/shared/components/AnimatedBackground").then(module => ({ default: module.AnimatedBackground })))
@@ -57,6 +58,12 @@ export default function Portfolio() {
         <LazyLoadWrapper>
           <Suspense fallback={<div className="h-20 animate-pulse bg-gray-800/20" />}>
             <ExperienceSection />
+          </Suspense>
+        </LazyLoadWrapper>
+
+        <LazyLoadWrapper>
+          <Suspense fallback={<div className="h-20 animate-pulse bg-gray-800/20" />}>
+            <TestimonialsSection />
           </Suspense>
         </LazyLoadWrapper>
         
