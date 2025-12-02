@@ -1,6 +1,6 @@
 import { Testimonial, TestimonialFormData } from '../types/testimonial'
 
-const TESTIMONIAL_SERVICE_URL = process.env.NEXT_PUBLIC_EMAIL_SERVICE_URL
+const TESTIMONIAL_SERVICE_URL = process.env.NEXT_PUBLIC_TESTIMONIAL_SERVICE_URL
 
 export const testimonialsService = {
   async getTestimonials(): Promise<Testimonial[]> {
