@@ -1,11 +1,11 @@
 import { Testimonial, TestimonialFormData } from '../types/testimonial'
 
-const API_BASE_URL = 'https://client-insights-ms.onrender.com'
+const TESTIMONIAL_SERVICE_URL = process.env.NEXT_PUBLIC_EMAIL_SERVICE_URL
 
 export const testimonialsService = {
   async getTestimonials(): Promise<Testimonial[]> {
     try {
-      const response = await fetch(`${API_BASE_URL}/testimonials`, {
+      const response = await fetch(`${TESTIMONIAL_SERVICE_URL}/testimonials`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ export const testimonialsService = {
 
   async createTestimonial(data: TestimonialFormData): Promise<Testimonial> {
     try {
-      const response = await fetch(`${API_BASE_URL}/testimonials`, {
+      const response = await fetch(`${TESTIMONIAL_SERVICE_URL}/testimonials`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
