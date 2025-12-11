@@ -1,14 +1,5 @@
 <h2 align="left">¡Hola! 👋 Soy Javier Ivan, Desarrollador de Software de Tijuana, Baja California</h2>
 
----
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JavierIvanValenzuelaEsparza&theme=dark&show_icons=true&hide_border=true&count_private=true"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JavierIvanValenzuelaEsparza&theme=dark&show_icons=true&hide_border=true&layout=compact"/>
-
-</div>
-
----
 <img align="right" height="150" src ='https://i.pinimg.com/originals/65/eb/8a/65eb8a6b4a8966bafd26d1dee21ed97f.gif'/>
 
 ---
