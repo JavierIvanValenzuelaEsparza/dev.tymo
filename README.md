@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Javier Iván Valenzuela Esparza</h1>
+<h1>Javier Ivan Valenzuela Esparza</h1>
 
 <h3>Software Developer · WMS & ERP Specialist</h3>
 
