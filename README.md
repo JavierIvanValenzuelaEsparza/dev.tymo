@@ -1,16 +1,16 @@
 <div align="center">
 
-<h1>👋 Javier Iván Valenzuela Esparza</h1>
-<h3>Software Developer · WMS & ERP Specialist</h3>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=220&section=header&text=Javier%20Iván%20Valenzuela%20Esparza&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=@whoistymo%20%7C%20Software%20Developer&descAlignY=52&descSize=16"/>
 
 <p>
-<strong>React · Node.js · Microservices · Clean Architecture</strong><br/>
-📍 Tijuana, Baja California — México
+<strong>WMS · ERP · Logistics Systems</strong><br/>
+React · Node.js · Clean Architecture
 </p>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=38BDF8&center=true&vCenter=true&width=720&lines=Building+Scalable+Logistics+Systems;High+Volume+Logistics+Software;Code+Built+for+Production"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=38BDF8&center=true&vCenter=true&width=760&lines=Designing+Systems+That+Survive+Production;Logistics+%7C+Scalability+%7C+Performance;Code+with+Business+Purpose"/>
 
 </div>
+
 
 ---
 
