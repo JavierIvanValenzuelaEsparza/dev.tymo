@@ -1,108 +1,113 @@
-<h1 align="center">👋 Hola, soy <strong>Javier Ivan Valenzuela Esparza</strong></h1>
-<h3 align="center">Software Developer | WMS & ERP Specialist | React · Node.js · .NET · Golang Enthusiast</h3>
+<div align="center">
 
-<p align="center">
-  📍 Tijuana, Baja California · México
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=180&section=header&text=Javier%20Ivan%20Valenzuela%20Esparza&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
 
----
+### 🚀 Software Developer | WMS & ERP Specialist
 
-<img align="right" height="180" src="https://i.pinimg.com/originals/65/eb/8a/65eb8a6b4a8966bafd26d1dee21ed97f.gif">
+**React · Node.js · .NET · Golang · Clean Architecture**
 
-## 👨‍💻 Sobre mí
-Soy un desarrollador especializado en **Sistemas WMS y ERP**, con experiencia construyendo soluciones escalables, robustas y eficientes para logística, ecommerce y automatización.  
-Trabajo con tecnologías modernas, arquitectura limpia y buenas prácticas para entregar software profesional.
+📍 *Tijuana, Baja California — México*
 
-Me apasiona crear:
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=38BDF8&center=true&vCenter=true&width=700&lines=Building+Scalable+Logistics+Systems;WMS+%7C+ERP+%7C+High+Volume+Operations;Clean+Code+%2B+Business+Logic+%3D+Impact"/>
 
-- Plataformas escalables  
-- Arquitecturas modernas  
-- APIs rápidas y seguras  
-- UIs profesionales y funcionales  
-- Sistemas logísticos de alto volumen  
-
----
-
-# 🛠️ Tech Stack & Skills
-
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30"/>
-  <img width="12"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30"/>
-  <img width="12"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30"/>
-  <img width="12"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" height="40"/>
-  <img width="12"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30"/>
-  <img width="12"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" height="30"/>
-  <img width="16"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="30"/>
 </div>
 
 ---
 
-# 📊 Mis GitHub Stats
+## 👨‍💻 About Me
+
+<img align="right" height="190" src="https://i.pinimg.com/originals/65/eb/8a/65eb8a6b4a8966bafd26d1dee21ed97f.gif"/>
+
+I'm a **Software Developer specialized in WMS & ERP systems**, focused on building **high-performance, scalable, and maintainable solutions** for logistics, ecommerce, and enterprise automation.
+
+🔹 Strong backend & frontend foundations
+🔹 Business-oriented development mindset
+🔹 Clean Architecture & Domain-driven thinking
+🔹 High-volume logistics systems experience
+
+---
+
+## 🛠️ Tech Stack
 
 <div align="center">
 
-### ⭐ GitHub Statistics
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whoistymo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-### 🧠 Lenguajes más usados
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whoistymo&layout=compact&theme=tokyonight&hide_border=true)
-
-### 🔥 Racha y Actividad
-
-![GitHub Streak](https://streak-stats.demolab.com/?user=whoistymo&theme=tokyonight&hide_border=true)
-
-### 📈 Actividad Gráfica
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=whoistymo&theme=react-dark&hide_border=true)
+<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,dotnet,golang,mongodb,postgresql,redis,docker,kubernetes,tailwind&perline=7"/>
 
 </div>
 
 ---
 
-# 🔧 Extra Badges
+## 📊 GitHub Analytics
 
-<div align="left">
-  <img src="https://img.shields.io/badge/Code%20Quality-Professional-blue?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Focus-WMS%20%7C%20ERP-orange?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Status-Active%20Developer-brightgreen?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Mindset-Clean%20Architecture-purple?style=flat-square"/>
+<div align="center">
+
+### ⭐ GitHub Stats
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=whoistymo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+
+### 🧠 Top Languages
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whoistymo&layout=compact&theme=tokyonight&hide_border=true"/>
+
+### 🔥 Contribution Streak
+
+<img src="https://streak-stats.demolab.com?user=whoistymo&theme=tokyonight&hide_border=true"/>
+
 </div>
 
 ---
 
-# 🤝 Conecta conmigo
+## 📈 Contribution Activity Graph
 
-<div align="left">
-  <a href="https://www.instagram.com/whoistymo">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&color=E4405F&logoColor=white&style=for-the-badge" height="35"/>
-  </a>
-  <a href="mailto:javiervalenzuela041219@gmail.com">
-    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&color=D14836&logoColor=white&style=for-the-badge" height="35"/>
-  </a>
-  <a href="https://discord.com/">
-    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&color=7289DA&logoColor=white&style=for-the-badge" height="35"/>
-  </a>
-  <a href="https://www.linkedin.com/in/">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&color=0077B5&logoColor=white&style=for-the-badge" height="35"/>
-  </a>
+<div align="center">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=whoistymo&theme=react-dark&hide_border=true"/>
 </div>
 
 ---
 
-# 🧠 Frase que me guía
+## 🧩 Focus Areas
 
-> *"El código bien escrito no solo funciona… también se entiende."*
+<div align="center">
+
+![WMS](https://img.shields.io/badge/WMS-Logistics%20Systems-blue?style=for-the-badge)
+![ERP](https://img.shields.io/badge/ERP-Business%20Automation-orange?style=for-the-badge)
+![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-Professional-purple?style=for-the-badge)
+![Microservices](https://img.shields.io/badge/Microservices-Scalable-success?style=for-the-badge)
+
+</div>
 
 ---
 
-<p align="center">
-  Hecho con ❤️ por <strong>Javier Ivan</strong>
-</p>
+## 🤝 Connect With Me
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/">
+<img src="https://img.shields.io/badge/LinkedIn-Javier%20Valenzuela-0077B5?style=for-the-badge&logo=linkedin"/>
+</a>
+
+<a href="mailto:javiervalenzuela041219@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=for-the-badge&logo=gmail"/>
+</a>
+
+<a href="https://www.instagram.com/whoistymo">
+<img src="https://img.shields.io/badge/Instagram-@whoistymo-E4405F?style=for-the-badge&logo=instagram"/>
+</a>
+
+</div>
+
+---
+
+## 🧠 Philosophy
+
+> *“Good code doesn’t just work — it communicates, scales, and survives.”*
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,100:0f2027&height=120&section=footer"/>
+
+**Made with ❤️ by Javier Ivan**
+
+</div>
