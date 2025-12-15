@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Javier Ivan Valenzuela Esparza</h1>
+<h1>Javier Iván Valenzuela Esparza</h1>
 
 <h3>Software Developer · WMS & ERP Specialist</h3>
 
@@ -22,9 +22,9 @@ React · Node.js · Microservices · Clean Architecture<br/>
 
 I'm a **Software Developer specialized in WMS & ERP systems**, focused on building **high-performance, scalable and maintainable software** for logistics, ecommerce and enterprise environments.
 
-I work daily with **real production systems**, solving complex business problems through clean architecture, solid backend design and professional user interfaces.
+I work daily with **real production systems**, solving complex business problems through **clean architecture**, solid backend design and professional user interfaces.
 
-### What I build:
+### What I build
 
 * 🚚 High-volume **WMS platforms**
 * 🏬 **ERP systems** aligned to real operations
@@ -37,63 +37,110 @@ I work daily with **real production systems**, solving complex business problems
 ## 🛠️ Tech Stack
 
 <div align="center">
-
 <img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,dotnet,golang,mongodb,postgresql,redis,docker,kubernetes,tailwind&perline=7"/>
-
 </div>
 
 ---
 
 ## 🧠 Core Knowledge
 
-* **Architecture**
+<table align="center">
+<tr>
+<td width="33%" valign="top">
 
-  * Clean Architecture
-  * Microservices
-  * Domain-Driven Design (DDD)
-  * Event-Driven Systems
+### Architecture
 
-* **Backend**
+* Clean Architecture
+* Microservices
+* Domain-Driven Design (DDD)
+* Event-Driven Systems
 
-  * Node.js / TypeScript
-  * REST APIs
-  * High-concurrency systems
-  * Business logic & workflows
+</td>
+<td width="33%" valign="top">
 
-* **Frontend**
+### Backend
 
-  * React
-  * Tailwind CSS
-  * Operational UI/UX
+* Node.js / TypeScript
+* REST APIs
+* High-concurrency systems
+* Business logic & workflows
 
-* **Logistics**
+</td>
+<td width="33%" valign="top">
 
-  * WMS
-  * ERP
-  * Inventory
-  * Orders
-  * Suppliers
-  * Distribution
+### Frontend
+
+* React
+* Tailwind CSS
+* Operational UI/UX
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<table align="center">
+<tr>
+<td width="33%" valign="top">
+
+### Logistics
+
+* WMS
+* ERP
+* Inventory
+
+</td>
+<td width="33%" valign="top">
+
+### Operations
+
+* Orders
+* Suppliers
+* Distribution
+
+</td>
+<td width="33%" valign="top">
+
+### Focus
+
+* Scalability
+* Maintainability
+* Performance
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📊 GitHub Analytics
 
-<div align="center">
+<table align="center">
+<tr>
+<td align="center">
 
 ### ⭐ GitHub Stats
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=JavierIvanValenzuelaEsparza&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img src="https://github-readme-stats.vercel.app/api?username=JavierIvanValenzuelaEsparza&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+
+</td>
+<td align="center">
 
 ### 🧠 Top Languages
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JavierIvanValenzuelaEsparza&layout=compact&theme=tokyonight&hide_border=true"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JavierIvanValenzuelaEsparza&layout=compact&theme=tokyonight&hide_border=true"/>
+
+</td>
+<td align="center">
 
 ### 🔥 Contribution Streak
 
 <img src="https://streak-stats.demolab.com?user=JavierIvanValenzuelaEsparza&theme=tokyonight&hide_border=true"/>
 
-</div>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -110,3 +157,7 @@ I work daily with **real production systems**, solving complex business problems
 > *“Good code doesn’t just work — it communicates, scales and survives production.”*
 
 ---
+
+<p align="center">
+<sub>Software built for real operations, not demos.</sub>
+</p>
