@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=160&section=header"/>
-
-<h1>Javier Iván Valenzuela Esparza</h1>
+<h1>Javier Ivan Valenzuela Esparza</h1>
 
 <h3>Software Developer · WMS & ERP Specialist</h3>
 
