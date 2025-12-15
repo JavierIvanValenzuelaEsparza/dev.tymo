@@ -103,39 +103,6 @@ I work daily with **real production systems**, solving complex business problems
 
 ---
 
-## 🏅 Professional Focus
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/WMS-Logistics%20Systems-blue?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/ERP-Business%20Automation-orange?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Clean%20Architecture-Professional-purple?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Microservices-Scalable-success?style=for-the-badge"/>
-
-</div>
-
----
-
-## 🤝 Connect With Me
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/">
-<img src="https://img.shields.io/badge/LinkedIn-Javier%20Valenzuela-0077B5?style=for-the-badge&logo=linkedin"/>
-</a>
-
-<a href="mailto:javiervalenzuela041219@gmail.com">
-<img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=for-the-badge&logo=gmail"/>
-</a>
-
-<a href="https://www.instagram.com/whoistymo">
-<img src="https://img.shields.io/badge/Instagram-@whoistymo-E4405F?style=for-the-badge&logo=instagram"/>
-</a>
-
-</div>
-
----
-
 ## 🧠 Philosophy
 
 > *“Good code doesn’t just work — it communicates, scales and survives production.”*
