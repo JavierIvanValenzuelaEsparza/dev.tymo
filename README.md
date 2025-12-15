@@ -1,16 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=220&section=header&text=Javier%20Iván%20Valenzuela%20Esparza&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=@whoistymo%20%7C%20Software%20Developer&descAlignY=52&descSize=16"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=210&section=header&text=Javier%20Iván%20Valenzuela%20Esparza&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Developer%20%7C%20WMS%20%26%20ERP%20Specialist&descAlignY=55&descSize=18"/>
 
 <p>
-<strong>WMS · ERP · Logistics Systems</strong><br/>
-React · Node.js · Clean Architecture
+<strong>React · Node.js · Microservices · Clean Architecture</strong><br/>
+📍 Tijuana, Baja California — México
 </p>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=38BDF8&center=true&vCenter=true&width=760&lines=Designing+Systems+That+Survive+Production;Logistics+%7C+Scalability+%7C+Performance;Code+with+Business+Purpose"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=38BDF8&center=true&vCenter=true&width=760&lines=Building+Scalable+Logistics+Systems;WMS+%7C+ERP+%7C+High+Volume+Operations;Clean+Code+%2B+Business+Logic+%3D+Impact"/>
 
 </div>
-
 
 ---
 
