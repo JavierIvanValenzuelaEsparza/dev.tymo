@@ -108,11 +108,3 @@ I work daily with **real production systems**, solving complex business problems
 > *“Good code doesn’t just work — it communicates, scales and survives production.”*
 
 ---
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,100:0f2027&height=120&section=footer"/>
-
-**Made with ❤️ by Javier Iván** <sub>Software that survives real production</sub>
-
-</div>
