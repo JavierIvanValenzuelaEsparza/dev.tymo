@@ -81,15 +81,15 @@ I work daily with **real production systems**, solving complex business problems
 
 ### ⭐ GitHub Stats
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=TU_USERNAME_AQUI&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=JavierIvanValenzuelaEsparza&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
 
 ### 🧠 Top Languages
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USERNAME_AQUI&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JavierIvanValenzuelaEsparza&layout=compact&theme=tokyonight&hide_border=true"/>
 
 ### 🔥 Contribution Streak
 
-<img src="https://streak-stats.demolab.com?user=TU_USERNAME_AQUI&theme=tokyonight&hide_border=true"/>
+<img src="https://streak-stats.demolab.com?user=JavierIvanValenzuelaEsparza&theme=tokyonight&hide_border=true"/>
 
 </div>
 
@@ -98,7 +98,7 @@ I work daily with **real production systems**, solving complex business problems
 ## 📈 Contribution Activity Graph
 
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=TU_USERNAME_AQUI&theme=react-dark&hide_border=true"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=JavierIvanValenzuelaEsparza&theme=react-dark&hide_border=true"/>
 </div>
 
 ---
