@@ -7,7 +7,7 @@
 <p>
 <strong>Logistics Systems · Scalable Architectures · Clean Code</strong><br/>
 React · Node.js · Microservices · Clean Architecture<br/>
-📍 Tijuana, Baja California — México
+Tijuana, Baja California — México
 </p>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3000&pause=1000&color=9CA3AF&center=true&vCenter=true&width=780&lines=Designing+software+for+real+world+operations;Building+scalable+WMS+and+ERP+systems;Code+written+for+clarity%2C+maintainability+and+scale"/>
@@ -16,7 +16,7 @@ React · Node.js · Microservices · Clean Architecture<br/>
 
 ---
 
-## 👨‍💻 About Me
+## About Me
 
 <img align="right" height="190" src="https://i.pinimg.com/originals/65/eb/8a/65eb8a6b4a8966bafd26d1dee21ed97f.gif"/>
 
@@ -26,15 +26,15 @@ I work daily with **real production systems**, solving complex business problems
 
 ### What I build
 
-* 🚚 High-volume **WMS platforms**
-* 🏬 **ERP systems** aligned to real operations
-* 🔌 Fast & secure **APIs**
-* 🧠 **Scalable architectures**
-* 🎨 Clean, functional **UIs**
+* High-volume **WMS platforms**
+* **ERP systems** aligned to real operations
+* Fast & secure **APIs**
+* **Scalable architectures**
+* Clean, functional **UIs**
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 <img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,dotnet,golang,mongodb,postgresql,redis,docker,kubernetes,tailwind&perline=7"/>
@@ -42,99 +42,27 @@ I work daily with **real production systems**, solving complex business problems
 
 ---
 
-## 🧠 Core Knowledge
-
-<table align="center">
-<tr>
-<td width="33%" valign="top">
-
-### Architecture
-
-* Clean Architecture
-* Microservices
-* Domain-Driven Design (DDD)
-* Event-Driven Systems
-
-</td>
-<td width="33%" valign="top">
-
-### Backend
-
-* Node.js / TypeScript
-* REST APIs
-* High-concurrency systems
-* Business logic & workflows
-
-</td>
-<td width="33%" valign="top">
-
-### Frontend
-
-* React
-* Tailwind CSS
-* Operational UI/UX
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<table align="center">
-<tr>
-<td width="33%" valign="top">
-
-### Logistics
-
-* WMS
-* ERP
-* Inventory
-
-</td>
-<td width="33%" valign="top">
-
-### Operations
-
-* Orders
-* Suppliers
-* Distribution
-
-</td>
-<td width="33%" valign="top">
-
-### Focus
-
-* Scalability
-* Maintainability
-* Performance
-
-</td>
-</tr>
-</table>
-
----
-
-## 📊 GitHub Analytics
+## GitHub Analytics
 
 <table align="center">
 <tr>
 <td align="center">
 
-### ⭐ GitHub Stats
+### GitHub Stats
 
 <img src="https://github-readme-stats.vercel.app/api?username=JavierIvanValenzuelaEsparza&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
 
 </td>
 <td align="center">
 
-### 🧠 Top Languages
+### Top Languages
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JavierIvanValenzuelaEsparza&layout=compact&theme=tokyonight&hide_border=true"/>
 
 </td>
 <td align="center">
 
-### 🔥 Contribution Streak
+### Contribution Streak
 
 <img src="https://streak-stats.demolab.com?user=JavierIvanValenzuelaEsparza&theme=tokyonight&hide_border=true"/>
 
@@ -144,7 +72,7 @@ I work daily with **real production systems**, solving complex business problems
 
 ---
 
-## 📈 Contribution Activity Graph
+## Contribution Activity Graph
 
 <div align="center">
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=JavierIvanValenzuelaEsparza&theme=react-dark&hide_border=true"/>
@@ -152,12 +80,9 @@ I work daily with **real production systems**, solving complex business problems
 
 ---
 
-## 🧠 Philosophy
+## Philosophy
 
 > *“Good code doesn’t just work — it communicates, scales and survives production.”*
 
 ---
 
-<p align="center">
-<sub>Software built for real operations, not demos.</sub>
-</p>
